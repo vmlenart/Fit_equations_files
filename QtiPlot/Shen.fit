@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fit>
+<fit version="1.0">
+<model>Shen</model>
+<type>2</type>
+<function>(1-(0.5*theta)*atan((4*M*x*V)/(2*x*(2*M+V^2+1)+tc*((2*M+1)^2)+V^2)))^2</function>
+<parameter>
+    <name>tc</name>
+    <explanation></explanation>
+    <value>8.3117565213290e-03</value>
+</parameter>
+<parameter>
+    <name>theta</name>
+    <explanation></explanation>
+    <value>6.4495040874820e-02</value>
+</parameter>
+</fit>
