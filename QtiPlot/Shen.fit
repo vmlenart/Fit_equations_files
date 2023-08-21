@@ -3,15 +3,30 @@
 <fit version="1.0">
 <model>Shen</model>
 <type>2</type>
-<function>(1-(0.5*theta)*atan((4*M*x*V)/(2*x*(2*M+V^2+1)+tc*((2*M+1)^2)+V^2)))^2</function>
+<function>(1-(0.5*theta)*atan((4*((w1p/w0e)^2)*x*V)/(2*x*(2*((w1p/w0e)^2)+V^2+1)+(((w0e/2)^2)/4*D)*((2*((w1p/w0e)^2)+1)^2)+V^2)))^2</function>
 <parameter>
-    <name>tc</name>
+    <name>D</name>
     <explanation></explanation>
-    <value>8.3117565213290e-03</value>
+    <value>1.0000000000000e+00</value>
+</parameter>
+<parameter>
+    <name>V</name>
+    <explanation></explanation>
+    <value>1.0000000000000e+00</value>
 </parameter>
 <parameter>
     <name>theta</name>
     <explanation></explanation>
-    <value>6.4495040874820e-02</value>
+    <value>1.0000000000000e+00</value>
+</parameter>
+<parameter>
+    <name>w0e</name>
+    <explanation></explanation>
+    <value>1.0000000000000e+00</value>
+</parameter>
+<parameter>
+    <name>w1p</name>
+    <explanation></explanation>
+    <value>1.0000000000000e+00</value>
 </parameter>
 </fit>

@@ -1,10 +1,10 @@
 ﻿
 
 [General Information]
-Function Name = Shen
+Function Name = Shen_w_D
 Brief Description = 
 Function Source = N/A
-Number Of Parameters = 4
+Number Of Parameters = 5
 Function Type = User-Defined
 Function Form = Expression
 Path = 
@@ -15,16 +15,16 @@ Function Model = Explicit
 
 
 [Fitting Parameters]
-Names = theta,tc,M,V
-Initial Values = 0.04(V),0.02(V),59.15(V),10.15(V)
-Meanings = ?,?,?,?
-Lower Bounds = --(I, Off),--(I, Off),--(I, Off),--(I, Off)
-Upper Bounds = --(I, Off),--(I, Off),--(I, Off),--(I, Off)
+Names = theta,D,V,w0e,w1p
+Initial Values = 0.04(V),1.46e-007(V),10.15(F),0.000118(F),0.000911(F)
+Meanings = ?,?,?,?,?
+Lower Bounds = --(I, Off),--(I, Off),--(I, Off),--(I, Off),--(I, Off)
+Upper Bounds = --(I, Off),--(I, Off),--(I, Off),--(I, Off),--(I, Off)
 Naming Method = User-Defined
-Number Of Significant Digits = 0,0,0,0
-Unit = ,,,
-Format = --,--,--,--
-CustomDisplay = --,--,--,--
+Number Of Significant Digits = 0,0,0,0,0
+Unit = ,,,,
+Format = --,--,--,--,--
+CustomDisplay = --,--,--,--,--
 
 
 [Independent Variables]
@@ -36,7 +36,7 @@ y =
 
 
 [Formula]
-(1-(0.5*theta)*atan((4*M*x*V)/(2*x*(2*M+V^2+1)+tc*((2*M+1)^2)+V^2)))^2
+(1-(0.5*theta)*atan((4*((w1p/w0e)^2)*x*V)/(2*x*(2*((w1p/w0e)^2)+V^2+1)+((((w0e/2)^2)/(4*D)))*((2*((w1p/w0e)^2)+1)^2)+V^2)))^2
 
 
 [Constraints]
@@ -98,6 +98,7 @@ Meanings =
 [QuickCheck]
 x=1
 theta=0.04
-tc=0.02
-M=59.15
+D=1.46E-7
 V=10.15
+w0e=1.18E-4
+w1p=9.11E-4

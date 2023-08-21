@@ -1,7 +1,7 @@
 ﻿
 
 [General Information]
-Function Name = Shen
+Function Name = beam_waist
 Brief Description = 
 Function Source = N/A
 Number Of Parameters = 4
@@ -10,13 +10,13 @@ Function Form = Expression
 Path = 
 Number Of Independent Variables = 1
 Number Of Dependent Variables = 1
-Category = Thermal Lens|User Defined
+Category = User Defined
 Function Model = Explicit
 
 
 [Fitting Parameters]
-Names = theta,tc,M,V
-Initial Values = 0.04(V),0.02(V),59.15(V),10.15(V)
+Names = m,lambda,z0,w
+Initial Values = 1(V),5.328e-07(F),0.02(V),1(V)
 Meanings = ?,?,?,?
 Lower Bounds = --(I, Off),--(I, Off),--(I, Off),--(I, Off)
 Upper Bounds = --(I, Off),--(I, Off),--(I, Off),--(I, Off)
@@ -36,7 +36,7 @@ y =
 
 
 [Formula]
-(1-(0.5*theta)*atan((4*M*x*V)/(2*x*(2*M+V^2+1)+tc*((2*M+1)^2)+V^2)))^2
+sqrt(m)*w*sqrt(1+(((x-z0)*lambda)/(w^2*Pi))^2)
 
 
 [Constraints]
@@ -97,7 +97,7 @@ Meanings =
 
 [QuickCheck]
 x=1
-theta=0.04
-tc=0.02
-M=59.15
-V=10.15
+m=1
+lambda=5.328E-7
+z0=0.02
+w=1
